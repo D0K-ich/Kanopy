@@ -2,6 +2,8 @@ package main
 
 import (
 	lg "TimeTracker/pkg/Loging"
+	cfg "TimeTracker/pkg/Config"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
@@ -9,8 +11,13 @@ import (
 )
 
 func main() {
+	// Start logger
 	logger := lg.GetLogger()
-	logger.Info("Running")
+	logger.Info("Start main application")
+	// Initialize configuration
+	cfg := cfg.GetConfig()
+	
+	
 	a := app.New()
 	w := a.NewWindow("TimeTracker")
 	w.Resize(fyne.NewSize(800, 600))
@@ -25,6 +32,6 @@ func main() {
 
 	w.ShowAndRun()
 
+	logger.Info("End without problem", cfg.Listen.Port)
 
-	logger.Info("Testing")
 }
