@@ -1,0 +1,4 @@
+time="2023-06-11T15:53:41+03:00" level=info msg=Running func="main.main()" file="TimeTracker.go; 28"
+time="2023-06-11T15:53:41+03:00" level=info msg=Testing func="main.main()" file="TimeTracker.go; 29"
+time="2023-06-11T15:54:00+03:00" level=info msg=Running func="main.main()" file="TimeTracker.go; 13"
+time="2023-06-11T15:54:06+03:00" level=info msg=Testing func="main.main()" file="TimeTracker.go; 29"
