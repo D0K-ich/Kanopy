@@ -4,7 +4,6 @@ import (
 	lg "TimeTracker/pkg/Loging"
 	"log"
 	"sync"
-
 	"github.com/ilyakaznacheev/cleanenv"
 )
 
@@ -19,6 +18,8 @@ type Config struct {
 	AppConfig struct {
 		LogLevel string `env:"LOG-LEVEL" env-default:"Info"`
 	}
+	Width int `env:"WIDTH" env-default:"800"`
+	Height int `env:"HEIGHT" env-default:"800"`
 }
 
 var instance *Config
@@ -29,17 +30,18 @@ func GetConfig() (*Config) {
 	once.Do(func() {
 		logger := lg.GetLogger()
 		logger.Info("Start config")
+		
 
 		instance = &Config{}
 
 		cleanenv.ReadEnv(instance)
 
 		if err := cleanenv.ReadEnv(instance); err != nil {
-			logger.Info(err)
 			helpText := "There are some porblems with configuring"
 			cleanenv.GetDescription(instance, &helpText)
 			log.Fatal(err)
 		}
+		
 	})
 	return instance
 }

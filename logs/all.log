@@ -1,7 +1,0 @@
-time="2023-06-11T15:53:41+03:00" level=info msg=Running func="main.main()" file="TimeTracker.go; 28"
-time="2023-06-11T15:53:41+03:00" level=info msg=Testing func="main.main()" file="TimeTracker.go; 29"
-time="2023-06-11T15:54:00+03:00" level=info msg=Running func="main.main()" file="TimeTracker.go; 13"
-time="2023-06-11T15:54:06+03:00" level=info msg=Testing func="main.main()" file="TimeTracker.go; 29"
-time="2023-06-12T00:29:23+03:00" level=info msg="Start main application" func="main.main()" file="TimeTracker.go; 16"
-time="2023-06-12T00:29:23+03:00" level=info msg="Start config" func="TimeTracker/pkg/Config.GetConfig.func1()" file="Config.go; 31"
-time="2023-06-12T00:29:34+03:00" level=info msg="End without problem8080" func="main.main()" file="TimeTracker.go; 35"

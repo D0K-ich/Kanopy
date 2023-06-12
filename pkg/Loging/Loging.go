@@ -6,7 +6,6 @@ import (
 	"os"
 	"path"
 	"runtime"
-
 	"github.com/sirupsen/logrus"
 )
 
