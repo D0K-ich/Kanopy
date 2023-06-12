@@ -1,0 +1,3 @@
+time="2023-06-13T01:29:03+03:00" level=info msg="Start config" func="TimeTracker/pkg/Config.GetConfig.func1()" file="Config.go; 32"
+time="2023-06-13T01:29:03+03:00" level=info msg="Start main application" func="main.main()" file="TimeTracker.go; 14"
+time="2023-06-13T01:29:23+03:00" level=info msg="End without problem8080" func="main.main()" file="TimeTracker.go; 17"
