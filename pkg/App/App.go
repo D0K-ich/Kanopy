@@ -10,11 +10,11 @@ import (
 )
 
 type App struct {
-	config *cfg.Config
+	config *cfg.ConfigApp
 	loger *lg.Logger
 }
 
-func NewApp(config *cfg.Config, logger *lg.Logger, ) (App) {
+func NewApp(config *cfg.ConfigApp, logger *lg.Logger, ) (App) {
 	return App{
 		config: config,
 		loger: logger,
@@ -24,7 +24,7 @@ func NewApp(config *cfg.Config, logger *lg.Logger, ) (App) {
 func ShowApp() {
 	a := apl.New()
 	w := a.NewWindow("TimeTracker")
-	w.Resize(fyne.NewSize(float32(cfg.GetConfig().Height), float32(cfg.GetConfig().Width)))
+	w.Resize(fyne.NewSize(float32(cfg.GetConfigApp().Height), float32(cfg.GetConfigApp().Width)))
 
 	testConteiner := container.NewAppTabs(
 		container.NewTabItem("Tab1", widget.NewLabel("test")),

@@ -9,7 +9,7 @@ import (
 func main() {
 	// Start logger
 	logger := lg.GetLogger()
-	cfg := cfg.GetConfig()
+	cfg := cfg.GetConfigApp()
 
 	logger.Info("Start main application")
 	// Initialize configuration

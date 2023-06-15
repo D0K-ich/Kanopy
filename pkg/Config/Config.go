@@ -1,4 +1,4 @@
-package config
+package ConfigApp
 
 import (
 	lg "TimeTracker/pkg/Loging"
@@ -7,7 +7,7 @@ import (
 	"github.com/ilyakaznacheev/cleanenv"
 )
 
-type Config struct {
+type ConfigApp struct {
 	isDevelopment bool `env:"isDev" env-default:"true"` 
 	isDebug bool `env:"isDebug" env-default:"false"` 
 	Listen struct {
@@ -15,29 +15,29 @@ type Config struct {
 		BindIP string `env:"BIND-IP" env-default:"0.0.0.0"`
 		Port string `env:"PORT" env-default:"8080"`
 	}
-	AppConfig struct {
+	AppConfigApp struct {
 		LogLevel string `env:"LOG-LEVEL" env-default:"Info"`
 	}
 	Width int `env:"WIDTH" env-default:"800"`
 	Height int `env:"HEIGHT" env-default:"800"`
 }
 
-var instance *Config
+var instance *ConfigApp
 var once sync.Once
 
 
-func GetConfig() (*Config) {
+func GetConfigApp() (*ConfigApp) {
 	once.Do(func() {
 		logger := lg.GetLogger()
-		logger.Info("Start config")
+		logger.Info("Start ConfigApp")
 		
 
-		instance = &Config{}
+		instance = &ConfigApp{}
 
 		cleanenv.ReadEnv(instance)
 
 		if err := cleanenv.ReadEnv(instance); err != nil {
-			helpText := "There are some porblems with configuring"
+			helpText := "There are some porblems with ConfigAppuring"
 			cleanenv.GetDescription(instance, &helpText)
 			log.Fatal(err)
 		}
