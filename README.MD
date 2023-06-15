@@ -31,8 +31,6 @@ $ npm i your-awesome-plugin-name
 ```typescript
 import { hi } from "your-awesome-plugin-name";
 
-hi(); // Выведет в консоль "Привет!"
-```
 
 # Разработка
 
