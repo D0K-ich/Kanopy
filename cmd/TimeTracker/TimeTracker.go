@@ -1,9 +1,9 @@
 package main
 
 import (
+	app "TimeTracker/pkg/App"
 	cfg "TimeTracker/pkg/Config"
 	lg "TimeTracker/pkg/Loging"
-	app "TimeTracker/pkg/App"
 )
 
 func main() {
@@ -15,5 +15,4 @@ func main() {
 	// Initialize configuration
 	app.ShowApp()
 	logger.Info("End without problem", cfg.Listen.Port)
-
 }
