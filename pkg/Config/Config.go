@@ -1,7 +1,7 @@
 package ConfigApp
 
 import (
-	lg "TimeTracker/pkg/Loging"
+	lg "Kanopy/pkg/Loging"
 	"log"
 	"sync"
 	"github.com/ilyakaznacheev/cleanenv"

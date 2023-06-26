@@ -2,9 +2,9 @@ package main
 
 import (
 	//app "TimeTracker/pkg/App"
-	cfg "TimeTracker/pkg/Config"
-	lg "TimeTracker/pkg/Loging"
-	mv "TimeTracker/pkg/Movie"
+	cfg "Kanopy/pkg/Config"
+	lg "Kanopy/pkg/Loging"
+	mv "Kanopy/pkg/Movie"
 )
 
 func main() {

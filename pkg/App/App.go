@@ -1,9 +1,9 @@
 package App
 
 import (
-	cfg "TimeTracker/pkg/Config"
-	lg "TimeTracker/pkg/Loging"
-	th "TimeTracker/pkg/Themes"
+	cfg "Kanopy/pkg/Config"
+	lg "Kanopy/pkg/Loging"
+	th "Kanopy/pkg/Themes"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"

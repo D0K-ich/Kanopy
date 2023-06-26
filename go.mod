@@ -1,4 +1,4 @@
-module TimeTracker
+module Kanopy
 
 go 1.20
 
