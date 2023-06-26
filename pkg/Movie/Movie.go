@@ -1,40 +1,38 @@
 package movie
-  
+
 import (
-  "fmt"
-  "strings"
-  "net/http"
-  "io/ioutil"
+	"context"
+	"fmt"
+	"log"
+
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func main() {
+var ctx = context.TODO()
 
-  url := "https://kinopoiskapiunofficial.tech/api/v2.2/films/320"
-  method := "GET"
+func GetTest() {
+	clientOptions := options.Client().ApplyURI("mongodb+srv://root:root@atlascluster.azkpkbd.mongodb.net/")
 
-  payload := strings.NewReader(``)
 
-  client := &http.Client {
-  }
-  req, err := http.NewRequest(method, url, payload)
+	client, err := mongo.Connect(ctx, clientOptions)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-  if err != nil {
-    fmt.Println(err)
-    return
-  }
-  req.Header.Add("X-API-KEY", "2083ccfd-5c78-4915-95ff-3acdd96e3692")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Succeeded")
 
-  res, err := client.Do(req)
-  if err != nil {
-    fmt.Println(err)
-    return
-  }
-  defer res.Body.Close()
+	coll := client.Database("KanopyDB").Collection("Films")
 
-  body, err := ioutil.ReadAll(res.Body)
-  if err != nil {
-    fmt.Println(err)
-    return
-  }
-  fmt.Println(string(body))
+	filter := bson.M{"film_id": 3}
+	var result bson.M
+	err = coll.FindOne(context.TODO(), filter).Decode(&result)
+	
+
+	fmt.Println((result["Название"]))
+
 }

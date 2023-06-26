@@ -27,7 +27,6 @@ func ShowApp() {
 
 	a := app.New()
 	a.Settings().SetTheme(th.GetMyTheme())
-	th.Test()
 	w := a.NewWindow("TimeTracker")
 	w.Resize(fyne.NewSize(float32(cfg.GetConfigApp().Height), float32(cfg.GetConfigApp().Width)))
 

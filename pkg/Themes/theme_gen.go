@@ -3,8 +3,6 @@
 package theme
 
 import (
-
-	"fmt"
 	"image/color"
 
 	"fyne.io/fyne/v2"
@@ -12,10 +10,6 @@ import (
 
 	"fyne.io/fyne/v2/theme"
 )
-
-func Test() {
-	fmt.Println(123)
-}
 
 type myTheme struct{}
 
