@@ -20,9 +20,12 @@ type ConfigApp struct {
 	}
 	Width int `env:"WIDTH" env-default:"800"`
 	Height int `env:"HEIGHT" env-default:"800"`
+	LinkToConnectionDB string `env:"LinkToConnection" env-default:"mongodb+srv://root:root@atlascluster.azkpkbd.mongodb.net/"`
 }
 
+
 var instance *ConfigApp
+
 var once sync.Once
 
 
@@ -45,3 +48,4 @@ func GetConfigApp() (*ConfigApp) {
 	})
 	return instance
 }
+

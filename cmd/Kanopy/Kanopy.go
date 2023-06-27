@@ -1,10 +1,10 @@
 package main
 
 import (
-	//app "TimeTracker/pkg/App"
+	app "Kanopy/pkg/App"
 	cfg "Kanopy/pkg/Config"
 	lg "Kanopy/pkg/Loging"
-	mv "Kanopy/pkg/Movie"
+	//mv "Kanopy/pkg/Movie"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 
 	logger.Info("Start main application")
 	// Initialize configuration
-	//app.ShowApp()
+	app.ShowApp()
 	logger.Info("End without problem", cfg.Listen.Port)
-	mv.GetTest()
+	//mv.GetTest()
 }

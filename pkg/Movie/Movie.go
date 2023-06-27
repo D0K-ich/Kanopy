@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 
+	cfg "Kanopy/pkg/Config"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -13,8 +15,7 @@ import (
 var ctx = context.TODO()
 
 func GetTest() {
-	clientOptions := options.Client().ApplyURI("mongodb+srv://root:root@atlascluster.azkpkbd.mongodb.net/")
-
+	clientOptions := options.Client().ApplyURI(cfg.GetConfigApp().LinkToConnectionDB)
 
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
