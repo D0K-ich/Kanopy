@@ -1,4 +1,4 @@
-package main
+package application
 
 import (
 	"embed"
@@ -11,9 +11,9 @@ import (
 //go:embed all:frontend/dist
 var assets embed.FS
 
-func main() {
+func NewApplication() (app *App) {
 	// Create an instance of the app structure
-	app := NewApp()
+	app = NewApp()
 
 	// Create application with options
 	err := wails.Run(&options.App{
@@ -30,7 +30,6 @@ func main() {
 		},
 	})
 
-	if err != nil {
-		println("Error:", err.Error())
-	}
+	if err != nil {println("Error:", err.Error())}
+	return
 }

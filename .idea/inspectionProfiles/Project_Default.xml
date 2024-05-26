@@ -6,19 +6,28 @@
     <inspection_tool class="GoCommentLeadingSpace" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoDeferGo" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoDirectComparisonOfErrors" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoDisabledGopathIndexing" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoErrorStringFormat" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoImportUsedAsName" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoLoopClosure" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoPrintFunctions" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoRedundantImportAlias" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoSelfAssignment" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoShift" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoSnakeCaseUsage" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoTypeAssertionOnErrors" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnsortedImport" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnusedCallResult" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoUnusedConst" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnusedExportedFunction" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnusedFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoUnusedGlobalVariable" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnusedParameter" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoUnusedTypeParameter" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GoVarAndConstTypeMayBeOmitted" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoVetAtomic" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoVetImpossibleInterfaceToInterfaceAssertion" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GoVulnerableCodeUsages" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VgoUnusedDependency" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>
